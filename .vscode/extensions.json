@@ -1,0 +1,29 @@
+{
+  "recommendations": [
+    //Snippets
+    "deinsoftware.arrow-function-snippets",
+    "dsznajder.es7-react-js-snippets",
+    "burkeholland.simple-react-snippets",
+    "andys8.jest-snippets",
+    //Linters
+    "mkaufman.HTMLHint",
+    "DavidAnson.vscode-markdownlint",
+    "nhoizey.gremlins",
+    "dbaeumer.vscode-eslint",
+    //Format
+    "esbenp.prettier-vscode",
+    "mikestead.dotenv",
+    //Uitls
+    "meganrogge.template-string-converter",
+    "kisstkondoros.vscode-gutter-preview",
+    "jock.svg",
+    "Gruntfuggly.todo-tree",
+    "team-sapling.sapling",
+    //Versions
+    "pflannery.vscode-versionlens",
+    "wix.vscode-import-cost",
+    // Spelling
+    "streetsidesoftware.code-spell-checker",
+    "streetsidesoftware.code-spell-checker-spanish"
+  ]
+}

@@ -1,0 +1,21 @@
+.demo-box {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  justify-content: center;
+
+  & .demo-image {
+    width: 140px;
+    display: block;
+    text-align: center;
+  }
+
+  & .demo-result {
+    color: $green;
+  }
+
+  & .demo-value {
+    font-weight: bold;
+  }
+}
