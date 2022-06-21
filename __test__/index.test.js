@@ -2,7 +2,7 @@ import React from 'react';
 import { fireEvent, render, screen } from '@testing-library/react';
 import { prettyDOM } from '@testing-library/dom';
 import '@testing-library/jest-dom/extend-expect';
-import Demo from '../src/index';
+import MapStreetview from '../src/index';
 
 jest.mock('react-i18next', () => ({
   // this mock makes sure any components using the translate hook can use it without a warning being shown
@@ -16,18 +16,19 @@ jest.mock('react-i18next', () => ({
   },
 }));
 
-const onHandleChange = value => {
-  // eslint-disable-next-line no-console
-  console.log(value);
-};
-
 describe('<Demo/>', () => {
   beforeEach(() => {
     jest.clearAllMocks();
   });
 
   test('Render Component', () => {
-    render(<Demo inputA={1} inputB={2} onHandleChange={onHandleChange} />);
+    render(
+      <MapStreetview
+        positionLat="4.7474369"
+        positionLng="-74.1048802"
+        googleMapsApiKey="AIzaSyA4bN_JLbgMsrsaspEm1ebHDiTNNvE7DTA"
+      />
+    );
     // TIP: How to debug
     // eslint-disable-next-line no-console
     console.log(prettyDOM(screen.innerHTML));
@@ -35,7 +36,13 @@ describe('<Demo/>', () => {
   });
 
   test('Component has a wrapper class', () => {
-    render(<Demo inputA={1} inputB={2} onHandleChange={onHandleChange} />);
+    render(
+      <MapStreetview
+        positionLat="4.7474369"
+        positionLng="-74.1048802"
+        googleMapsApiKey="AIzaSyA4bN_JLbgMsrsaspEm1ebHDiTNNvE7DTA"
+      />
+    );
     const component = screen.getByTestId('component-demo');
     expect(component).toHaveClass('demo-box');
   });
@@ -43,7 +50,13 @@ describe('<Demo/>', () => {
   test('Review if Action Button is enable and works', () => {
     const mockHandler = jest.fn();
 
-    render(<Demo inputA={1} inputB={2} onHandleChange={mockHandler} />);
+    render(
+      <MapStreetview
+        positionLat="4.7474369"
+        positionLng="-74.1048802"
+        googleMapsApiKey="AIzaSyA4bN_JLbgMsrsaspEm1ebHDiTNNvE7DTA"
+      />
+    );
     const btn = screen.getByText('demo.action');
     // eslint-disable-next-line no-console
     console.log(prettyDOM(btn));
@@ -54,7 +67,13 @@ describe('<Demo/>', () => {
   });
 
   test('Via logo is visible', () => {
-    render(<Demo inputA={1} inputB={2} onHandleChange={onHandleChange} />);
+    render(
+      <MapStreetview
+        positionLat="4.7474369"
+        positionLng="-74.1048802"
+        googleMapsApiKey="AIzaSyA4bN_JLbgMsrsaspEm1ebHDiTNNvE7DTA"
+      />
+    );
     const img = screen.getByAltText('via logo');
     const container = img.closest('div');
     // eslint-disable-next-line no-console
@@ -64,7 +83,13 @@ describe('<Demo/>', () => {
   });
 
   test.only('Sum result 1+2 is 3', () => {
-    render(<Demo inputA={1} inputB={2} onHandleChange={onHandleChange} />);
+    render(
+      <MapStreetview
+        positionLat="4.7474369"
+        positionLng="-74.1048802"
+        googleMapsApiKey="AIzaSyA4bN_JLbgMsrsaspEm1ebHDiTNNvE7DTA"
+      />
+    );
     const result = screen.getByText('demo.totalAmount', { exact: false });
     // eslint-disable-next-line no-console
     console.log(prettyDOM(result));
