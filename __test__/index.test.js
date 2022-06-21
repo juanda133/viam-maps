@@ -90,10 +90,5 @@ describe('<Demo/>', () => {
         googleMapsApiKey="AIzaSyA4bN_JLbgMsrsaspEm1ebHDiTNNvE7DTA"
       />
     );
-    const result = screen.getByText('demo.totalAmount', { exact: false });
-    // eslint-disable-next-line no-console
-    console.log(prettyDOM(result));
-    const span = result.firstElementChild;
-    expect(span.innerHTML).toBe('3');
   });
 });
