@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactStreetview from 'react-streetview';
+import ReactStreetview from 'react-google-streetview';
 
 const Streetview = props => {
   const { positionLat, positionLng, googleMapsApiKey } = props;

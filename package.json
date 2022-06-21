@@ -1,7 +1,7 @@
 {
   "private": false,
   "name": "@viamericas/viam-map",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "A React component that sums two number.",
   "main": "build/index.js",
   "scripts": {
@@ -52,8 +52,8 @@
     "prop-types": "15.7.2",
     "react": "17.0.2",
     "react-dom": "17.0.2",
-    "react-i18next": "11.14.3",
-    "react-streetview": "^1.1.1"
+    "react-google-streetview": "^0.0.9",
+    "react-i18next": "11.14.3"
   },
   "devDependencies": {
     "@babel/core": "7.16.5",
